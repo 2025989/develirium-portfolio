@@ -111,3 +111,7 @@ $('a[target="display"]').click(function() {
 		}
 	);
 });
+$("a").click(function () { 
+	$("a").css("color", "black");
+	$(this).css("color", "#DD0000");
+});
