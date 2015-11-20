@@ -45,13 +45,23 @@ li:hover {
 	background-color: rgba(0, 0, 0, 0.075);
 }
 
-iframe {
-	display: inline-block;
+#iframe {
+	display: none;
+	width: 45vw;
+	height: 40vw;
 	position: absolute;
 	right: 10vw;
-	top: 21vh;
-	width: 0vw;
-	height: 75vh;
-	border: none;
+	top: 20vh;
+	text-align: center;
+}
+h2#iframeTitle {
+	font: bold 2vw Arial, Helvetica, sans-serif;
+	margin-bottom: 1vw;
+}
+iframe {
+	display: inline-block;
+	width: 95%;
+	height: 100%;
+	border: 0.15625vw solid black;
 	border-radius: 5px;
 }

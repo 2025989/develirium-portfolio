@@ -13,7 +13,7 @@
 				font: 1.8vw "Arial";
 			}
 		</style>
-		<title></title>
+		<title>Money Division</title>
 	</head>
 
 	<body>
