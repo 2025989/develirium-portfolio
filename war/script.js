@@ -158,8 +158,9 @@ $('#dockButton').click(function() {
 		);
 		$('#iframe').animate(
 			{
-				"width": "86vw",
+				"width": "72vw",
 				"height": "70vh",
+				"right": "14vw",
 				"top": "5vh"
 			},
 			1500,
@@ -191,6 +192,7 @@ $('#dockButton').click(function() {
 			{
 				"width": "45vw",
 				"height": "60vh",
+				"right": "7vw",
 				"top": "17vh"
 			},
 			1500,
