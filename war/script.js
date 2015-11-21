@@ -36,7 +36,7 @@ $('#web').click(function() {
 		isWebDown = false;
 	}
 	$('div div').slideUp();
-	$('#css').html("CSS<img src='openMenuArrow.png' alt=''>");
+	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
 	$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
 	$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
 	isCssDown = false;
@@ -60,11 +60,11 @@ $('#web').click(function() {
 //submenus onclick
 $('#css').click(function() {
 	if (isCssDown == false) {
-		$('#css').html("- CSS -"),
+		$('#css').html("- Cascading Style Sheets -"),
 		isCssDown = true;
 	}
 	else {
-		$('#css').html("CSS<img src='openMenuArrow.png' alt=''>");
+		$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
 		$('#css img').css("visibility", "initial");
 		isCssDown = false;
 	}
@@ -86,7 +86,7 @@ $('#js').click(function() {
 		isJsDown = false;
 	}
 	$('li:not(#js):not(#web) + div').slideUp();
-	$('#css').html("CSS<img src='openMenuArrow.png' alt=''>");
+	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
 	isCssDown = false;
 	$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
 	isJspDown = false;
@@ -103,7 +103,7 @@ $('#jsp').click(function() {
 		isJspDown = false;
 	}
 	$('li:not(#jsp):not(#web) + div').slideUp();
-	$('#css').html("CSS<img src='openMenuArrow.png' alt=''>");
+	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
 	isCssDown = false;
 	$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
 	isJsDown = false;
