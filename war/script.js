@@ -144,7 +144,10 @@ $('#dockButton').click(function() {
 			}
 		);
 		$('#dockButton').animate(
-			{"width": "3.5vw"},
+			{
+				"width": "3.5vw",
+				"height": "56vh"
+			},
 			1500,
 			function() {}
 		);
@@ -167,7 +170,10 @@ $('#dockButton').click(function() {
 	else {
 		$('#dockButton').css("transform", "scaleX(1)");
 		$('#dockButton').animate(
-			{"width": "1.5vw"},
+			{
+				"width": "1.5vw",
+				"height": "100%"
+			},
 			1500,
 			function() {}
 		);
