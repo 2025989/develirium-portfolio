@@ -121,13 +121,14 @@ $('a[target="display"]').click(function() {
 			$('#dockButton').show();
 			$('#dockButton').css({
 				"background": "url('dockNavArrow.png') no-repeat center",
+				"background-size": "100%",
 				"background-color": "rgba(0, 0, 0, 0.075)"
 			});
 		}
 	);
 });
-$("a").click(function () { 
-	$("a").css("color", "black");
+$('a[target="display"]').click(function () { 
+	$('a').css("color", "black");
 	$(this).css("color", "#00AA00");
 });
 
@@ -141,6 +142,11 @@ $('#dockButton').click(function() {
 			function() {
 				$('#dockButton').css("transform", "scaleX(-1)");
 			}
+		);
+		$('#dockButton').animate(
+			{"width": "3.5vw"},
+			1500,
+			function() {}
 		);
 		$('h1').animate(
 			{"top": "-2em"},
@@ -160,6 +166,11 @@ $('#dockButton').click(function() {
 	}
 	else {
 		$('#dockButton').css("transform", "scaleX(1)");
+		$('#dockButton').animate(
+			{"width": "1.5vw"},
+			1500,
+			function() {}
+		);
 		$('nav').animate(
 			{"left": "7vw"},
 			1500,
