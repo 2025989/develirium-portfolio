@@ -2,6 +2,8 @@ $(document).ready(function() {
 	$('div').slideUp();
 });
 
+
+
 //show arrow images on hover
 $('#web').hover(
 	function() {$('#web img').css("visibility", "initial");},
@@ -19,6 +21,8 @@ $('#jsp').hover(
 	function() {$('#jsp img').css("visibility", "initial");},
 	function() {$('#jsp img').css("visibility", "hidden");}
 );
+
+
 
 //main menu onclick
 var isWebDown = false;
@@ -57,6 +61,8 @@ $('#web').click(function() {
 	);
 });
 
+
+
 //submenus onclick
 $('#css').click(function() {
 	if (isCssDown == false) {
@@ -75,6 +81,7 @@ $('#css').click(function() {
 	isJspDown = false;
 	$('#css + div').slideToggle();
 });
+
 $('#js').click(function() {
 	if (isJsDown == false) {
 		$('#js').html("- Javascript -"),
@@ -92,6 +99,7 @@ $('#js').click(function() {
 	isJspDown = false;
 	$('#js + div').slideToggle();
 });
+
 $('#jsp').click(function() {
 	if (isJspDown == false) {
 		$('#jsp').html("- Java Server Pages -"),
@@ -110,20 +118,23 @@ $('#jsp').click(function() {
 	$('#jsp + div').slideToggle();
 });
 
+
+
 //link onclick > display in iframe
 $('a[target="display"]').click(function() {
+	var title = $(this).text();
 	$('nav').animate(
 		{"left": "7vw"},
 		1500,
 		function() {
-			$('#iframe').show();
-			$('#iframeTitle').html($('iframe').contents().find('title').html());
 			$('#dockButton').show();
 			$('#dockButton').css({
 				"background": "url('dockNavArrow.png') no-repeat center",
 				"background-size": "100%",
 				"background-color": "rgba(0, 0, 0, 0.075)"
 			});
+			$('#iframe').show();
+			$('#iframeTitle').html(title);
 		}
 	);
 });
@@ -131,6 +142,8 @@ $('a[target="display"]').click(function () {
 	$('a').css("color", "black");
 	$(this).css("color", "#00AA00");
 });
+
+
 
 //dock menu
 var isDocked = false;
