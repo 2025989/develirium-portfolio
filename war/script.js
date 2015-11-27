@@ -35,7 +35,7 @@ $('ul > li').click(function() {
 	//if this menu is going down
 	if ($('+ div', this).css("display") == "none") {
 		//other menus & submenus up
-		$('div:not(this):not(#iframe)').slideUp();
+		$('div:not(this):not(#iframe):not(#dockButton)').slideUp();
 		//change $(this).html()
 		$(this).html($(this).html().substring(0, length-36));
 		$(this).prepend("- ");
