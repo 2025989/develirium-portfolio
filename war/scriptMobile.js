@@ -99,95 +99,74 @@ $('ul > li + div > li').click(function() {
 
 
 
-//link onclick > display in iframe
+//show iframe
 $('a[target="display"]').click(function() {
-	var title = $(this).text();
-	$('nav').animate(
-		{"left": "7vw"},
-		1500,
-		function() {
-			$('#dockButton').show();
-			$('#dockButton').css({
-				"background": "url('dockNavArrow.png') no-repeat center",
-				"background-size": "100%",
-				"background-color": "rgba(0, 0, 0, 0.075)"
-			});
-			$('#iframe').show();
-			$('#iframeTitle').html(title);
-		}
-	);
 	$('a').css("color", "black");
 	$(this).css("color", "#00AA00");
+	$('#dockButton').show();
+	$('#dockButton').css({
+		"background": "url('dockNavArrow.png') no-repeat center",
+		"background-size": "100%",
+		"background-color": "rgba(0, 0, 0, 0.075)"
+	});
+	var title = $(this).text();
+	$('nav').animate(
+		{"left": "-31.5vw"},
+		1500,
+		function() {
+			$('#iframe').show();
+			$('#iframeTitle').html(title);
+			$('#dockButton').css("transform", "scaleX(-1)");
+		}
+	);
+	$('#dockButton').animate(
+		{
+			"width": "3.5vw",
+			"height": "56vh"
+		},
+		1500,
+		function() {}
+	);
+	$('h1').animate(
+		{"top": "-2em"},
+		1500,
+		function() {}
+	);
+	$('#iframe').animate(
+		{
+			"width": "72vw",
+			"height": "70vh",
+			"right": "14vw",
+			"top": "5vh"
+		},
+		1500,
+		function() {}
+	);
 });
 
-
-
 //dock menu
-var isDocked = false;
 $('#dockButton').click(function() {
-	if (isDocked == false) {
-		$('nav').animate(
-			{"left": "-31.5vw"},
-			1500,
-			function() {
-				$('#dockButton').css("transform", "scaleX(-1)");
-			}
-		);
-		$('#dockButton').animate(
-			{
-				"width": "3.5vw",
-				"height": "56vh"
-			},
-			1500,
-			function() {}
-		);
-		$('h1').animate(
-			{"top": "-2em"},
-			1500,
-			function() {}
-		);
-		$('#iframe').animate(
-			{
-				"width": "72vw",
-				"height": "70vh",
-				"right": "14vw",
-				"top": "5vh"
-			},
-			1500,
-			function() {}
-		);
-		isDocked = true;	
-	}
-	else {
-		$('#dockButton').css("transform", "scaleX(1)");
-		$('#dockButton').animate(
+	$('#iframe').hide();
+	$('nav').animate(
+		{"left": "35vw"},
+		1500,
+		function() {
+		}
+	);
+	$('#dockButton').css("transform", "scaleX(1)");
+	$('#dockButton').animate(
 			{
 				"width": "1.5vw",
 				"height": "100%"
 			},
 			1500,
-			function() {}
-		);
-		$('nav').animate(
-			{"left": "7vw"},
-			1500,
-			function() {}
-		);
-		$('h1').animate(
-			{"top": "5vh"},
-			1500,
-			function() {}
-		);
-		$('#iframe').animate(
-			{
-				"width": "45vw",
-				"height": "60vh",
-				"right": "7vw",
-				"top": "17vh"
-			},
-			1500,
-			function() {}
-		);
-		isDocked = false;
-	}
+			function() {
+				$('#dockButton').hide();
+			}
+	);
+	$('h1').animate(
+		{"top": "5vh"},
+		1500,
+		function() {}
+	);
 });
