@@ -1,62 +1,66 @@
-$(document).ready(function() {
-	$('div').slideUp();
-});
-
-
+$('div').slideUp();
+var menuArray = new Array($('ul > li').length);
+for (var i = 0; i < menuArray.length; i++) {
+	menuArray[i] = $('ul > li').eq(i).html();
+}
+var submenuArray = new Array($('ul > li + div > li').length);
+for (var i = 0; i < submenuArray.length; i++) {
+	submenuArray[i] = $('ul > li + div > li').eq(i).html();
+}
 
 //show arrow images on hover
-$('#web').hover(
-	function() {$('#web img').css("visibility", "initial");},
-	function() {$('#web img').css("visibility", "hidden");}
+$('ul > li').hover( //menus
+	function() {$('img', this).css("visibility", "initial");},
+	function() {$('img', this).css("visibility", "hidden");}
 );
-$('#css').hover(
-	function() {$('#css img').css("visibility", "initial");},
-	function() {$('#css img').css("visibility", "hidden");}
-);
-$('#js').hover(
-	function() {$('#js img').css("visibility", "initial");},
-	function() {$('#js img').css("visibility", "hidden");}
-);
-$('#jsp').hover(
-	function() {$('#jsp img').css("visibility", "initial");},
-	function() {$('#jsp img').css("visibility", "hidden");}
+$('ul > li + div > li').hover( //submenus
+	function() {$('img', this).css("visibility", "initial");},
+	function() {$('img', this).css("visibility", "hidden");}
 );
 
 
 
 //main menu onclick
-var isWebDown = false;
-var isCssDown = false;
-var isJsDown = false;
-var isJspDown = false;
-$('#web').click(function() {
-	if (isWebDown == false) {
-		$('#web').html("- Web Development -"),
-		isWebDown = true;
+$('ul > li').click(function() {
+	var length = $(this).html().length;
+
+	//other menus & submenus revert .html() to initial
+	for (var i = 0; i < menuArray.length; i++) {
+		$('ul > li').eq(i).html(menuArray[i]);
 	}
-	else {
-		$('#web').html("Web Development<img src='openMenuArrow.png' alt=''>");
-		$('#web img').css("visibility", "initial");
-		isWebDown = false;
+	for (var i = 0; i < submenuArray.length; i++) {
+		$('ul > li + div > li').eq(i).html(submenuArray[i]);
 	}
-	$('div div').slideUp();
-	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
-	$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
-	$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
-	isCssDown = false;
-	isJSDown = false;
-	isJspDown = false;
-	$('#dockButton').hide();
-	$('#web + div').slideToggle(
+	
+	//if this menu is going down
+	if ($('+ div', this).css("display") == "none") {
+		//other menus & submenus up
+		$('div:not(this):not(#iframe)').slideUp();
+		//change $(this).html()
+		$(this).html($(this).html().substring(0, length-36));
+		$(this).prepend("- ");
+		$(this).append(" -");
+	}
+	
+	//if this menu is going up, show arrow
+	else {$('img', this).css("visibility", "initial");}
+	
+	//toggle this menu
+	$('+ div', this).slideToggle(
 		400,
 		function() {
-			$('#iframe').hide();
-			$('nav').animate(
-				{"left": "35vw"},
-				1500,
-				function() {}
-			);
-			$("a").css("color", "black");
+			//if menu has been toggled up >> all menus are toggled up
+			if ($(this).css("display") == "none") {
+				//hide everything
+				$('#dockButton').hide();
+				$('#iframe').hide();
+				$('nav').animate(
+					{"left": "35vw"},
+					1500,
+					function() {}
+				);
+				$("a").css("color", "black");
+			}
 		}
 	);
 });
@@ -64,58 +68,33 @@ $('#web').click(function() {
 
 
 //submenus onclick
-$('#css').click(function() {
-	if (isCssDown == false) {
-		$('#css').html("- Cascading Style Sheets -"),
-		isCssDown = true;
+$('ul > li + div > li').click(function() {
+	var length = $(this).html().length;
+	
+	//if this submenu is going down
+	if ($('+ div', this).css("display") == "none") {
+		//other submenus up
+		$(this).siblings('div').slideUp();
+		//other submenus revert .html() to initial
+		for (var i = 0; i < submenuArray.length; i++) {
+			$('ul > li + div > li').eq(i).html(submenuArray[i]);
+		}
+		//change $(this).html()
+		$(this).html($(this).html().substring(0, length-36));
+		$(this).prepend("- ");
+		$(this).append(" -");
 	}
+	
+	//if this submenu is going up
 	else {
-		$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
-		$('#css img').css("visibility", "initial");
-		isCssDown = false;
+		//revert $(this).html() to initial
+		$(this).html($(this).html().substring(2, length-2));
+		$(this).append("<img src='openMenuArrow.png' alt=''>");
+		$('img', this).css("visibility", "initial");
 	}
-	$('li:not(#css):not(#web) + div').slideUp();
-	$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
-	isJsDown = false;
-	$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
-	isJspDown = false;
-	$('#css + div').slideToggle();
-});
-
-$('#js').click(function() {
-	if (isJsDown == false) {
-		$('#js').html("- Javascript -"),
-		isJsDown = true;
-	}
-	else {
-		$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
-		$('#js img').css("visibility", "initial");
-		isJsDown = false;
-	}
-	$('li:not(#js):not(#web) + div').slideUp();
-	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
-	isCssDown = false;
-	$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
-	isJspDown = false;
-	$('#js + div').slideToggle();
-});
-
-$('#jsp').click(function() {
-	if (isJspDown == false) {
-		$('#jsp').html("- Java Server Pages -"),
-		isJspDown = true;
-	}
-	else {
-		$('#jsp').html("Java Server Pages<img src='openMenuArrow.png' alt=''>");
-		$('#jsp img').css("visibility", "initial");
-		isJspDown = false;
-	}
-	$('li:not(#jsp):not(#web) + div').slideUp();
-	$('#css').html("Cascading Style Sheets<img src='openMenuArrow.png' alt=''>");
-	isCssDown = false;
-	$('#js').html("Javascript<img src='openMenuArrow.png' alt=''>");
-	isJsDown = false;
-	$('#jsp + div').slideToggle();
+	
+	//toggle this submenu
+	$('+ div', this).slideToggle();
 });
 
 
