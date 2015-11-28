@@ -74,6 +74,7 @@
 						<a target="display" href="./jsp/simpletemperatureconversion/index.jsp"><li>Simple Temperature Conversion</li></a>
 						<a target="display" href="./jsp/highestlowestnumber/index.jsp"><li>Highest &amp; Lowest Number</li></a>
 						<a target="display" href="./jsp/temperatureconversion/index.jsp"><li>Temperature Conversion</li></a>
+						<a target="display" href="./jsp/calculator/index.jsp"><li>Calculator</li></a>
 					</div>
 				</div>
 			</ul>
