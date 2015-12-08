@@ -4,7 +4,20 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="2.1.4_jquery.min.js"></script>
+		<script>
+			var mq = window.matchMedia("(min-width: 1000px)");
+			
+			if (mq.matches) {
+				// window width is at least 1000px
+				document.write("<link rel='stylesheet' type='text/css' href='style.css'>");
+			}
+			else {
+				// window width is less than 1000px
+				document.write("<link rel='stylesheet' type='text/css' href='styleMobile.css'>");
+			}
+		</script>
+		
 		<title>2025989 Portfolio</title>
 	</head>
 	
@@ -86,7 +99,6 @@
 		</div>
 	</body>
 	
-	<script src="2.1.4_jquery.min.js"></script>
 	<script>
 		var mq = window.matchMedia("(min-width: 1000px)");
 		

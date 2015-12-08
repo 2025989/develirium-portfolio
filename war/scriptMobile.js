@@ -55,7 +55,7 @@ $('ul > li').click(function() {
 				$('#dockButton').hide();
 				$('#iframe').hide();
 				$('nav').animate(
-					{"left": "35vw"},
+					{"left": "20vw"},
 					1500,
 					function() {}
 				);
@@ -99,7 +99,7 @@ $('ul > li + div > li').click(function() {
 
 
 
-//show iframe
+//show iframe, dock menu
 $('a[target="display"]').click(function() {
 	$('a').css("color", "black");
 	$(this).css("color", "#00AA00");
@@ -111,7 +111,7 @@ $('a[target="display"]').click(function() {
 	});
 	var title = $(this).text();
 	$('nav').animate(
-		{"left": "-31.5vw"},
+		{"left": "-63vw"},
 		1500,
 		function() {
 			$('#iframe').show();
@@ -121,7 +121,7 @@ $('a[target="display"]').click(function() {
 	);
 	$('#dockButton').animate(
 		{
-			"width": "3.5vw",
+			"width": "5vw",
 			"height": "56vh"
 		},
 		1500,
@@ -144,11 +144,11 @@ $('a[target="display"]').click(function() {
 	);
 });
 
-//dock menu
+//undock menu
 $('#dockButton').click(function() {
 	$('#iframe').hide();
 	$('nav').animate(
-		{"left": "35vw"},
+		{"left": "20vw"},
 		1500,
 		function() {
 		}
