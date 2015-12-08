@@ -71,6 +71,9 @@
 						<a target="display" href="./js/functionsjquery/index.html"><li>Javascript functions (jQuery)</li></a>
 						<a target="display" href="./js/imageslider/index.html"><li>Image Slider</li></a>
 						<a target="display" href="./js/policeapp/index.html"><li>Police App</li></a>
+						<a target="display" href="./js/copyobject/index.html"><li>Copy Object</li></a>
+						<a target="display" href="./js/cargarage/index.html"><li>Car Garage</li></a>
+						<a target="display" href="./js/mobilehelloworld/index.html"><li>Mobile Hello World</li></a>
 					</div>
 					
 					<li id="jsp">Java Server Pages<img src="openMenuArrow.png" alt=""></li>
