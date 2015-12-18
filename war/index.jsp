@@ -38,6 +38,7 @@
 					<li>Greenfoot (Java)<img src="openMenuArrow.png" alt=""></li>
 					<div>
 						<a target="display" href="./games/garpsgame/index.html"><li>GarpsGame</li></a>
+						<a target="display" href="./games/pong/index.html"><li>Pong</li></a>
 					</div>
 				</div>
 				<li id="web">Web Development<img src="openMenuArrow.png" alt=""></li>
