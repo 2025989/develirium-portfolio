@@ -31,10 +31,10 @@
 			</ul>
 		</nav>
 		<span>
-			<h4>Have a nice day!</h4>
+			<h4>You can email me if you like.</h4>
 			<br><br>
 			<p>
-				 
+				<a id="mail" href="mailto:develirium@gmail.com">develirium@gmail.com</a>
 			</p>
 		</span>
 	</body>

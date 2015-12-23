@@ -3,18 +3,42 @@
 * {margin: 0px; padding: 0px;}
 
 body {
-	background: url('GrassHD.png') no-repeat fixed bottom;
+	background: no-repeat fixed bottom;
+	background-color: #EDFFEE;
+	background-image: url('GrassHD.png');
 	background-size: 100vw 50vw;
 }
 
 h1 {
 	position: relative;
-	top: 5vh;
+	top: 2.5vh;
 	text-align: center;
 	font: bold 3vw Arial, Helvetica, sans-serif;
 }
 
 nav {
+	position: relative;
+	top: 4.5vh;
+	width: 100vw;
+	height: 2vw;
+	background-color: #008000;
+	text-align: center;
+}
+nav li {
+	display: inline-block;
+	width: 15vw;
+	color: #FFFFFF;
+	font: 1.75vw Arial, Helvetica, sans-serif;
+}
+span {
+	position: relative;
+	top: 12vh;
+	text-align: center;
+}
+h4 {font: 2vw Arial, Helvetica, sans-serif;}
+p {font: 1.25vw Arial, Helvetica, sans-serif;}
+
+#dropdown {
 	display: inline-block;
 	margin-bottom: 5vw;
 	position: relative;
@@ -50,9 +74,12 @@ ul > li + div { /*menus*/
 ul > li + div > div { /*submenus*/
 	font-size: 1vw;
 }
-a {
+a:not(#mail) {
 	color: #000000;
 	text-decoration: none;
+}
+#mail {
+	color: #008000;
 }
 li:hover {
 	background-color: rgba(0, 0, 0, 0.075);
@@ -66,7 +93,8 @@ li:hover {
 	top: 0px;
 }
 
-#iframe {
+/*** iframe ***/
+div#iframe {
 	display: none;
 	width: 45vw;
 	height: 60vh;
@@ -86,4 +114,5 @@ iframe {
 	height: 100%;
 	border: 0.15625vw solid black;
 	border-radius: 5px;
+	background-color: #FFFFFF;
 }

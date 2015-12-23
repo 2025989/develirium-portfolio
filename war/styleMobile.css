@@ -15,6 +15,28 @@ h1 {
 }
 
 nav {
+	position: relative;
+	top: 7.5vh;
+	width: 100vw;
+	height: 4.5vw;
+	background-color: #008000;
+	text-align: center;
+}
+nav li {
+	display: inline-block;
+	width: 20vw;
+	color: #FFFFFF;
+	font: 3.5vw Arial, Helvetica, sans-serif;
+}
+span {
+	position: relative;
+	top: 12vh;
+	text-align: center;
+}
+h4 {font: 5vw Arial, Helvetica, sans-serif;}
+p {font: 3vw Arial, Helvetica, sans-serif;}
+
+#dropdown {
 	display: inline-block;
 	margin-bottom: 5vw;
 	position: relative;
@@ -50,9 +72,12 @@ ul > li + div { /*menus*/
 ul > li + div > div { /*submenus*/
 	font-size: 2vw;
 }
-a {
+a:not(#mail) {
 	color: #000000;
 	text-decoration: none;
+}
+#mail {
+	color: #008000;
 }
 li:hover {
 	background-color: rgba(0, 0, 0, 0.075);
@@ -66,6 +91,7 @@ li:hover {
 	top: 0px;
 }
 
+/*** iframe ***/
 #iframe {
 	display: none;
 	width: 45vw;

@@ -1,4 +1,4 @@
-$('div').slideUp();
+$('#dropdown div').slideUp();
 var menuArray = new Array($('ul > li').length);
 for (var i = 0; i < menuArray.length; i++) {
 	menuArray[i] = $('ul > li').eq(i).html();
@@ -35,7 +35,7 @@ $('ul > li').click(function() {
 	//if this menu is going down
 	if ($('+ div', this).css("display") == "none") {
 		//other menus & submenus up
-		$('div:not(this):not(#iframe):not(#dockButton)').slideUp();
+		$('div:not(this):not(#dropdown):not(#iframe):not(#dockButton)').slideUp();
 		//change $(this).html()
 		$(this).html($(this).html().substring(0, length-36));
 		$(this).prepend("- ");
@@ -54,7 +54,7 @@ $('ul > li').click(function() {
 				//hide everything
 				$('#dockButton').hide();
 				$('#iframe').hide();
-				$('nav').animate(
+				$('#dropdown').animate(
 					{"left": "20vw"},
 					1500,
 					function() {}
@@ -110,44 +110,49 @@ $('a[target="display"]').click(function() {
 		"background-color": "rgba(0, 0, 0, 0.075)"
 	});
 	var title = $(this).text();
-	$('nav').animate(
-		{"left": "-63vw"},
-		1500,
-		function() {
-			$('#iframe').show();
-			$('#iframeTitle').html(title);
-			$('#dockButton').css("transform", "scaleX(-1)");
-		}
+	$('#dropdown').animate(
+			{"left": "-63vw"},
+			1500,
+			function() {
+				$('#iframe').show();
+				$('#iframeTitle').html(title);
+				$('#dockButton').css("transform", "scaleX(-1)");
+			}
 	);
 	$('#dockButton').animate(
-		{
-			"width": "5vw",
-			"height": "56vh"
-		},
-		1500,
-		function() {}
+			{
+				"width": "5vw",
+				"height": "56vh"
+			},
+			1500,
+			function() {}
+	);
+	$('nav').animate(
+			{"top": "-2.6em"},
+			1500,
+			function() {}
 	);
 	$('h1').animate(
-		{"top": "-2em"},
-		1500,
-		function() {}
+			{"top": "-2em"},
+			1500,
+			function() {}
 	);
 	$('#iframe').animate(
-		{
-			"width": "72vw",
-			"height": "70vh",
-			"right": "14vw",
-			"top": "5vh"
-		},
-		1500,
-		function() {}
+			{
+				"width": "72vw",
+				"height": "70vh",
+				"right": "14vw",
+				"top": "5vh"
+			},
+			1500,
+			function() {}
 	);
 });
 
 //undock menu
 $('#dockButton').click(function() {
 	$('#iframe').hide();
-	$('nav').animate(
+	$('#dropdown').animate(
 		{"left": "20vw"},
 		1500,
 		function() {
@@ -163,6 +168,11 @@ $('#dockButton').click(function() {
 			function() {
 				$('#dockButton').hide();
 			}
+	);
+	$('nav').animate(
+		{"top": "7.5vh"},
+		1500,
+		function() {}
 	);
 	$('h1').animate(
 		{"top": "5vh"},

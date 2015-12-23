@@ -31,10 +31,11 @@
 			</ul>
 		</nav>
 		<span>
-			<h4>Have a nice day!</h4>
+			<h4>It's all about programming.</h4>
 			<br><br>
 			<p>
-				 
+				I'm currently working with Java, HTML, CSS, Javascript, JSP and SQL.<br>
+				I'd also like to delve into C++, Ruby, PHP, ASP, Android, and many more languages! 
 			</p>
 		</span>
 	</body>

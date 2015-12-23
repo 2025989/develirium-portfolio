@@ -1,4 +1,4 @@
-$('div').slideUp();
+$('#dropdown div').slideUp();
 var menuArray = new Array($('ul > li').length);
 for (var i = 0; i < menuArray.length; i++) {
 	menuArray[i] = $('ul > li').eq(i).html();
@@ -35,7 +35,7 @@ $('ul > li').click(function() {
 	//if this menu is going down
 	if ($('+ div', this).css("display") == "none") {
 		//other menus & submenus up
-		$('div:not(this):not(#iframe):not(#dockButton)').slideUp();
+		$('div:not(this):not(#dropdown):not(#iframe):not(#dockButton)').slideUp();
 		//change $(this).html()
 		$(this).html($(this).html().substring(0, length-36));
 		$(this).prepend("- ");
@@ -54,7 +54,7 @@ $('ul > li').click(function() {
 				//hide everything
 				$('#dockButton').hide();
 				$('#iframe').hide();
-				$('nav').animate(
+				$('#dropdown').animate(
 					{"left": "35vw"},
 					1500,
 					function() {}
@@ -102,7 +102,7 @@ $('ul > li + div > li').click(function() {
 //link onclick > display in iframe
 $('a[target="display"]').click(function() {
 	var title = $(this).text();
-	$('nav').animate(
+	$('#dropdown').animate(
 		{"left": "7vw"},
 		1500,
 		function() {
@@ -126,7 +126,7 @@ $('a[target="display"]').click(function() {
 var isDocked = false;
 $('#dockButton').click(function() {
 	if (isDocked == false) {
-		$('nav').animate(
+		$('#dropdown').animate(
 			{"left": "-31.5vw"},
 			1500,
 			function() {
@@ -138,6 +138,11 @@ $('#dockButton').click(function() {
 				"width": "3.5vw",
 				"height": "56vh"
 			},
+			1500,
+			function() {}
+		);
+		$('nav').animate(
+			{"top": "-3.1em"},
 			1500,
 			function() {}
 		);
@@ -168,13 +173,18 @@ $('#dockButton').click(function() {
 			1500,
 			function() {}
 		);
-		$('nav').animate(
+		$('#dropdown').animate(
 			{"left": "7vw"},
 			1500,
 			function() {}
 		);
+		$('nav').animate(
+			{"top": "4.5vh"},
+			1500,
+			function() {}
+		);
 		$('h1').animate(
-			{"top": "5vh"},
+			{"top": "2.5vh"},
 			1500,
 			function() {}
 		);
