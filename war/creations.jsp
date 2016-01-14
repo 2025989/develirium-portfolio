@@ -32,7 +32,7 @@
 		</nav>
 		<div id="dropdown">
 			<ul>
-				<a target="_blank" href="http://github.com/2025989/"><li>GitHub</li></a>
+				<a target="_blank" href="http://github.com/2025989/"><li>GitHub<img id="githubLogo" src="GitHub-Mark.png" alt="GitHub Logo"></li></a>
 				<!-- <li id="apps">Applications<img src="openMenuArrow.png" alt=""></li>
 				<div>
 					<li>TEST<img src="openMenuArrow.png" alt=""></li>
