@@ -5,6 +5,8 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<script src="2.1.4_jquery.min.js"></script>
+		
+		<!-- SELECT CSS FILE DEPENDING ON WINDOW SIZE -->
 		<script>
 			var mq = window.matchMedia("(min-width: 1000px)");
 			
@@ -17,11 +19,13 @@
 				document.write("<link rel='stylesheet' type='text/css' href='styleMobile.css'>");
 			}
 		</script>
-		<title>2025989 Portfolio</title>
+		<title>Develirium Portfolio</title>
 	</head>
 	
 	<body>
 		<h1>Welcome to my portfolio on Software Development!</h1>
+		
+		<!-- NAVBAR -->
 		<nav>
 			<ul>
 				<a href="./index.jsp"><li>Home</li></a>
@@ -30,9 +34,15 @@
 				<a href="./contact.jsp"><li>Contact</li></a>
 			</ul>
 		</nav>
+		
+		<!-- DROPDOWN MENU / CONTENT-->
 		<div id="dropdown">
 			<ul>
+			
+				<!-- GITHUB LINK -->
 				<a target="_blank" href="http://github.com/2025989/"><li>GitHub<img id="githubLogo" src="GitHub-Mark.png" alt="GitHub Logo"></li></a>
+				
+				<!-- APPLICATIONS -->
 				<!-- <li id="apps">Applications<img src="openMenuArrow.png" alt=""></li>
 				<div>
 					<li>TEST<img src="openMenuArrow.png" alt=""></li>
@@ -40,16 +50,24 @@
 						<a target="display" href="./css/helloworld/index.html"><li>Hello World</li></a>
 					</div>
 				</div> -->
+				
+				<!-- GAMES -->
 				<li id="games">Games<img src="openMenuArrow.png" alt=""></li>
 				<div>
+				
+					<!-- GREENFOOT GAMES -->
 					<li>Greenfoot (Java)<img src="openMenuArrow.png" alt=""></li>
 					<div>
 						<a target="display" href="./games/garpsgame/index.html"><li>GarpsGame</li></a>
 						<a target="display" href="./games/pong/index.html"><li>Pong</li></a>
 					</div>
 				</div>
+				
+				<!-- WEB DEVELOPMENT / HTML HOMEWORK -->
 				<li id="web">Web Development<img src="openMenuArrow.png" alt=""></li>
 				<div>
+				
+					<!-- CSS -->
 					<li id="css">Cascading Style Sheets<img src="openMenuArrow.png" alt=""></li>
 					<div>
 						<a target="display" href="./css/helloworld/index.html"><li>Hello World</li></a>
@@ -64,6 +82,7 @@
 						<a target="display" href="http://projectbierhier.appspot.com"><li>Project Bierhier</li></a>
 					</div>
 					
+					<!-- JS -->
 					<li id="js">Javascript<img src="openMenuArrow.png" alt=""></li>
 					<div>
 						<a target="display" href="./js/test/index.html"><li>jQuery Test</li></a>
@@ -84,6 +103,7 @@
 						<a target="display" href="./js/mobilehelloworld/index.html"><li>Mobile Hello World</li></a>
 					</div>
 					
+					<!-- JSP -->
 					<li id="jsp">Java Server Pages<img src="openMenuArrow.png" alt=""></li>
 					<div>
 						<a target="display" href="./jsp/moneydivision/index.jsp"><li>Money Division</li></a>
@@ -104,12 +124,15 @@
 			</ul>
 			<div id="dockButton"></div>
 		</div>
+		
+		<!-- IFRAME -->
 		<div id="iframe">
 			<h2 id="iframeTitle"></h2>
 			<iframe name="display"></iframe>
 		</div>
 	</body>
 	
+	<!-- JQUERY SCRIPT -->
 	<script>
 		var mq = window.matchMedia("(min-width: 1000px)");
 		

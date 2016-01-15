@@ -5,6 +5,8 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<script src="2.1.4_jquery.min.js"></script>
+		
+		<!-- SELECT CSS FILE DEPENDING ON WINDOW SIZE -->
 		<script>
 			var mq = window.matchMedia("(min-width: 1000px)");
 			
@@ -17,11 +19,13 @@
 				document.write("<link rel='stylesheet' type='text/css' href='styleMobile.css'>");
 			}
 		</script>
-		<title>2025989 Portfolio</title>
+		<title>Develirium Portfolio</title>
 	</head>
 	
 	<body>
 		<h1>Welcome to my portfolio on Software Development!</h1>
+		
+		<!-- NAVBAR -->
 		<nav>
 			<ul>
 				<a href="./index.jsp"><li>Home</li></a>
@@ -30,6 +34,8 @@
 				<a href="./contact.jsp"><li>Contact</li></a>
 			</ul>
 		</nav>
+		
+		<!-- CONTENT -->
 		<span>
 			<h4>It's all about programming.</h4>
 			<br><br>

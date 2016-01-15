@@ -78,11 +78,11 @@ ul > li + div { /*menus*/
 ul > li + div > div { /*submenus*/
 	font-size: 2vw;
 }
-a:not(#mail) {
+a:not(.contact-link) {
 	color: #000000;
 	text-decoration: none;
 }
-#mail {
+.contact-link {
 	color: #008000;
 }
 li:hover {

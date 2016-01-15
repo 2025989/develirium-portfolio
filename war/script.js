@@ -1,3 +1,4 @@
+//make arrays to store the original text of the dropdown menu items
 $('#dropdown div').slideUp();
 var menuArray = new Array($('ul > li').length);
 for (var i = 0; i < menuArray.length; i++) {
