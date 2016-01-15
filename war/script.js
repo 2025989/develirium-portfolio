@@ -1,3 +1,17 @@
+//background color on hover
+$('#github, .title').hover(
+	function() {$(this).css("background-color", "rgba(0, 0, 0, 0.075)");},
+	function() {$('#github, .title').css("background-color", "rgba(0, 0, 0, 0)");}
+);
+$('.subtitle').hover(
+	function() {$(this).css("background-color", "rgba(0, 0, 0, 0.075)");},
+	function() {$('.subtitle').css("background-color", "rgba(0, 0, 0, 0)");}
+);
+$('.submenu li').hover(
+	function() {$(this).css("background-color", "rgba(0, 0, 0, 0.075)");},
+	function() {$('.submenu li').css("background-color", "rgba(0, 0, 0, 0)");}
+);
+
 //make arrays to store the original text of the dropdown menu items
 $('.menu, .submenu').slideUp();
 var menuArray = new Array($('.title').length);

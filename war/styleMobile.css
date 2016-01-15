@@ -94,9 +94,6 @@ nav li a {
 	color: #FFFFFF !important;
 	text-decoration: none;
 }
-li:hover {
-	background-color: rgba(0, 0, 0, 0.075);
-}
 #dockButton {
 	display: inline-block;
 	width: 1.5vw;
