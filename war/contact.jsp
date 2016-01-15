@@ -28,28 +28,26 @@
 		<!-- NAVBAR -->
 		<nav>
 			<ul>
-				<a href="./index.jsp"><li>Home</li></a>
-				<a href="./creations.jsp"><li>Creations</li></a>
-				<a href="./about.jsp"><li>About</li></a>
-				<a href="./contact.jsp"><li>Contact</li></a>
+				<li><a href="./index.jsp">Home</a></li>
+				<li><a href="./creations.jsp">Creations</a></li>
+				<li><a href="./about.jsp">About</a></li>
+				<li><a href="./contact.jsp">Contact</a></li>
 			</ul>
 		</nav>
 		
 		<!-- CONTENT -->
-		<span>
-			<h4>You can email me if you like.</h4>
+		<div id="content">
+			<h2>You can email me if you like.</h2>
 			<br><br>
 			<p>
 				<a class="contact-link" href="mailto:develirium@gmail.com">develirium@gmail.com</a>
 			</p>
-		</span>
-		<br><br><br><br>
-		<span>
-			<h4>I have LinkedIn too.</h4>
+			<br><br><br><br>
+			<h2>I have LinkedIn too.</h2>
 			<br><br>
 			<p>
 				<a class="contact-link" href="https://nl.linkedin.com/in/daniel-w-b36890112" target="_blank">LinkedIn profile</a>
 			</p>
-		</span>
+		</div>
 	</body>
 </html>

@@ -2,9 +2,12 @@
 
 * {margin: 0px; padding: 0px;}
 
-body {
+background {
+	width: 100vw;
+	height: 100vh;
 	background: url('GrassHD.png') no-repeat fixed bottom;
 	background-size: 100vw 50vw;
+	z-index: -2;
 }
 
 h1 {
@@ -28,12 +31,12 @@ nav li {
 	color: #FFFFFF;
 	font: 3.5vw Arial, Helvetica, sans-serif;
 }
-span {
-	position: relative;
+#content {
+	display: initial !important;
 	top: 12vh;
 	text-align: center;
 }
-h4 {font: 5vw Arial, Helvetica, sans-serif;}
+h2 {font: 5vw Arial, Helvetica, sans-serif;}
 p {font: 3vw Arial, Helvetica, sans-serif;}
 
 #dropdown {
@@ -67,15 +70,15 @@ img#githubLogo {
 	position: relative;
 	top: 0.15em;
 }
-div {
+.menu, .submenu {
 	display: none;
 	font-size: 3.5vw;
 }
-ul > li + div { /*menus*/
+.menu {
 	max-height: 45vh;
 	overflow-y: auto;
 }
-ul > li + div > div { /*submenus*/
+.submenu {
 	font-size: 2vw;
 }
 a:not(.contact-link) {
@@ -83,7 +86,13 @@ a:not(.contact-link) {
 	text-decoration: none;
 }
 .contact-link {
-	color: #008000;
+	color: #008000 !important;
+}
+nav li a {
+	width: 100%;
+	display: inline-block;
+	color: #FFFFFF !important;
+	text-decoration: none;
 }
 li:hover {
 	background-color: rgba(0, 0, 0, 0.075);

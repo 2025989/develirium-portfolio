@@ -1,20 +1,20 @@
 //make arrays to store the original text of the dropdown menu items
-$('#dropdown div').slideUp();
-var menuArray = new Array($('ul > li').length);
+$('.menu, .submenu').slideUp();
+var menuArray = new Array($('.title').length);
 for (var i = 0; i < menuArray.length; i++) {
-	menuArray[i] = $('ul > li').eq(i).html();
+	menuArray[i] = $('.title').eq(i).html();
 }
-var submenuArray = new Array($('ul > li + div > li').length);
+var submenuArray = new Array($('.subtitle').length);
 for (var i = 0; i < submenuArray.length; i++) {
-	submenuArray[i] = $('ul > li + div > li').eq(i).html();
+	submenuArray[i] = $('.subtitle').eq(i).html();
 }
 
 //show arrow images on hover
-$('ul > li').hover( //menus
+$('.title').hover( //menus
 	function() {$('img', this).css("visibility", "initial");},
 	function() {$('img', this).css("visibility", "hidden");}
 );
-$('ul > li + div > li').hover( //submenus
+$('.subtitle').hover( //submenus
 	function() {$('img', this).css("visibility", "initial");},
 	function() {$('img', this).css("visibility", "hidden");}
 );
@@ -22,21 +22,21 @@ $('ul > li + div > li').hover( //submenus
 
 
 //main menu onclick
-$('ul > li').click(function() {
+$('.title').click(function() {
 	var length = $(this).html().length;
 
 	//other menus & submenus revert .html() to initial
 	for (var i = 0; i < menuArray.length; i++) {
-		$('ul > li').eq(i).html(menuArray[i]);
+		$('.title').eq(i).html(menuArray[i]);
 	}
 	for (var i = 0; i < submenuArray.length; i++) {
-		$('ul > li + div > li').eq(i).html(submenuArray[i]);
+		$('.subtitle').eq(i).html(submenuArray[i]);
 	}
 	
 	//if this menu is going down
-	if ($('+ div', this).css("display") == "none") {
+	if ($('+ li .menu', this).css("display") == "none") {
 		//other menus & submenus up
-		$('div:not(this):not(#dropdown):not(#iframe):not(#dockButton)').slideUp();
+		$('.menu:not(this), .submenu:not(this)').slideUp();
 		//change $(this).html()
 		$(this).html($(this).html().substring(0, length-36));
 		$(this).prepend("- ");
@@ -47,7 +47,7 @@ $('ul > li').click(function() {
 	else {$('img', this).css("visibility", "initial");}
 	
 	//toggle this menu
-	$('+ div', this).slideToggle(
+	$('+ li .menu', this).slideToggle(
 		400,
 		function() {
 			//if menu has been toggled up >> all menus are toggled up
@@ -69,16 +69,16 @@ $('ul > li').click(function() {
 
 
 //submenus onclick
-$('ul > li + div > li').click(function() {
+$('.subtitle').click(function() {
 	var length = $(this).html().length;
 	
 	//if this submenu is going down
-	if ($('+ div', this).css("display") == "none") {
+	if ($('+ li .submenu', this).css("display") == "none") {
 		//other submenus up
-		$(this).siblings('div').slideUp();
+		$('.submenu:not(this)').slideUp();
 		//other submenus revert .html() to initial
 		for (var i = 0; i < submenuArray.length; i++) {
-			$('ul > li + div > li').eq(i).html(submenuArray[i]);
+			$('.subtitle:not(this)').eq(i).html(submenuArray[i]);
 		}
 		//change $(this).html()
 		$(this).html($(this).html().substring(0, length-36));
@@ -95,7 +95,7 @@ $('ul > li + div > li').click(function() {
 	}
 	
 	//toggle this submenu
-	$('+ div', this).slideToggle();
+	$('+ li .submenu', this).slideToggle();
 });
 
 

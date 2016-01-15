@@ -28,21 +28,21 @@
 		<!-- NAVBAR -->
 		<nav>
 			<ul>
-				<a href="./index.jsp"><li>Home</li></a>
-				<a href="./creations.jsp"><li>Creations</li></a>
-				<a href="./about.jsp"><li>About</li></a>
-				<a href="./contact.jsp"><li>Contact</li></a>
+				<li><a href="./index.jsp">Home</a></li>
+				<li><a href="./creations.jsp">Creations</a></li>
+				<li><a href="./about.jsp">About</a></li>
+				<li><a href="./contact.jsp">Contact</a></li>
 			</ul>
 		</nav>
 		
 		<!-- CONTENT -->
-		<span>
-			<h4>It's all about programming.</h4>
+		<div id="content">
+			<h2>It's all about programming.</h2>
 			<br><br>
 			<p>
 				I'm currently working with Java, HTML, CSS, Javascript, JSP and SQL.<br>
 				I'd also like to delve into C++, Ruby, Perl, PHP, ASP, Android, and many more languages! 
 			</p>
-		</span>
+		</div>
 	</body>
 </html>

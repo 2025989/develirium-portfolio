@@ -28,10 +28,10 @@
 		<!-- NAVBAR -->
 		<nav>
 			<ul>
-				<a href="./index.jsp"><li>Home</li></a>
-				<a href="./creations.jsp"><li>Creations</li></a>
-				<a href="./about.jsp"><li>About</li></a>
-				<a href="./contact.jsp"><li>Contact</li></a>
+				<li><a href="./index.jsp">Home</a></li>
+				<li><a href="./creations.jsp">Creations</a></li>
+				<li><a href="./about.jsp">About</a></li>
+				<li><a href="./contact.jsp">Contact</a></li>
 			</ul>
 		</nav>
 		
@@ -40,87 +40,99 @@
 			<ul>
 			
 				<!-- GITHUB LINK -->
-				<a target="_blank" href="http://github.com/2025989/"><li>GitHub<img id="githubLogo" src="GitHub-Mark.png" alt="GitHub Logo"></li></a>
+				<li id="github"><a target="_blank" href="http://github.com/2025989/">GitHub<img id="githubLogo" src="GitHub-Mark.png" alt="GitHub Logo"></a></li>
 				
 				<!-- APPLICATIONS -->
 				<!-- <li id="apps">Applications<img src="openMenuArrow.png" alt=""></li>
 				<div>
 					<li>TEST<img src="openMenuArrow.png" alt=""></li>
 					<div>
-						<a target="display" href="./css/helloworld/index.html"><li>Hello World</li></a>
+						<li><a target="display" href="./css/helloworld/index.html">Hello World</a></li>
 					</div>
 				</div> -->
 				
 				<!-- GAMES -->
-				<li id="games">Games<img src="openMenuArrow.png" alt=""></li>
-				<div>
-				
-					<!-- GREENFOOT GAMES -->
-					<li>Greenfoot (Java)<img src="openMenuArrow.png" alt=""></li>
-					<div>
-						<a target="display" href="./games/garpsgame/index.html"><li>GarpsGame</li></a>
-						<a target="display" href="./games/pong/index.html"><li>Pong</li></a>
-					</div>
-				</div>
+				<li class="title">Games<img src="openMenuArrow.png" alt=""></li>
+				<li>
+					<ul class="menu">
+					
+						<!-- GREENFOOT GAMES -->
+						<li class="subtitle">Greenfoot (Java)<img src="openMenuArrow.png" alt=""></li>
+						<li>
+							<ul class="submenu">
+								<li><a target="display" href="./games/garpsgame/index.html">GarpsGame</a></li>
+								<li><a target="display" href="./games/pong/index.html">Pong</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 				
 				<!-- WEB DEVELOPMENT / HTML HOMEWORK -->
-				<li id="web">Web Development<img src="openMenuArrow.png" alt=""></li>
-				<div>
-				
-					<!-- CSS -->
-					<li id="css">Cascading Style Sheets<img src="openMenuArrow.png" alt=""></li>
-					<div>
-						<a target="display" href="./css/helloworld/index.html"><li>Hello World</li></a>
-						<a target="display" href="./css/simplewebsite/index.html"><li>Simple Website</li></a>
-						<a target="display" href="./css/table/index.html"><li>Table</li></a>
-						<a target="display" href="./css/css1-4/index.html"><li>CSS 1-4</li></a>
-						<a target="display" href="./css/float/index.html"><li>Float</li></a>
-						<a target="display" href="./css/loginform/index.html"><li>Login Form</li></a>
-						<a target="display" href="./css/exampleform/index.html"><li>Example Form</li></a>
-						<a target="display" href="./css/fonts/index.html"><li>Fonts</li></a>
-						<a target="display" href="./css/fullfeaturedwebsite/index.html"><li>Full Featured Website</li></a>
-						<a target="display" href="http://projectbierhier.appspot.com"><li>Project Bierhier</li></a>
-					</div>
+				<li class="title">Web Development<img src="openMenuArrow.png" alt=""></li>
+				<li>
+					<ul class="menu">
 					
-					<!-- JS -->
-					<li id="js">Javascript<img src="openMenuArrow.png" alt=""></li>
-					<div>
-						<a target="display" href="./js/test/index.html"><li>jQuery Test</li></a>
-						<a target="display" href="./js/menu/index.html"><li>jQuery Menu</li></a>
-						<a target="display" href="./js/testevent/index.html"><li>Test Event</li></a>
-						<a target="display" href="./js/buttonevent/index.html"><li>Button Event</li></a>
-						<a target="display" href="./js/colorlists/index.html"><li>Color Lists</li></a>
-						<a target="display" href="./js/clickblock/index.html"><li>Click Block</li></a>
-						<a target="display" href="./js/animation/index.html"><li>Animation</li></a>
-						<a target="display" href="./js/variables/index.html"><li>Javascript Variables</li></a>
-						<a target="display" href="./js/typeof/index.html"><li>typeof</li></a>
-						<a target="display" href="./js/functions/index.html"><li>Javascript functions</li></a>
-						<a target="display" href="./js/functionsjquery/index.html"><li>Javascript functions (jQuery)</li></a>
-						<a target="display" href="./js/imageslider/index.html"><li>Image Slider</li></a>
-						<a target="display" href="./js/policeapp/index.html"><li>Police App</li></a>
-						<a target="display" href="./js/copyobject/index.html"><li>Copy Object</li></a>
-						<a target="display" href="./js/cargarage/index.html"><li>Car Garage</li></a>
-						<a target="display" href="./js/mobilehelloworld/index.html"><li>Mobile Hello World</li></a>
-					</div>
-					
-					<!-- JSP -->
-					<li id="jsp">Java Server Pages<img src="openMenuArrow.png" alt=""></li>
-					<div>
-						<a target="display" href="./jsp/moneydivision/index.jsp"><li>Money Division</li></a>
-						<a target="display" href="./jsp/seconds/index.jsp"><li>Seconds</li></a>
-						<a target="display" href="./jsp/greeting/index.jsp"><li>Greeting</li></a>
-						<a target="display" href="./jsp/fibonacci/index.jsp"><li>Fibonacci</li></a>
-						<a target="display" href="./jsp/chessboard/index.jsp"><li>Chessboard</li></a>
-						<a target="display" href="./jsp/fivetimestable/index.jsp"><li>Five Times Table</li></a>
-						<a target="display" href="./jsp/timestablesgrid/index.jsp"><li>Times Tables Grid</li></a>
-						<a target="display" href="./jsp/timestableselect/index.jsp"><li>Times Table Select</li></a>
-						<a target="display" href="./jsp/timestablenext/index.jsp"><li>Times Table Next</li></a>
-						<a target="display" href="./jsp/simpletemperatureconversion/index.jsp"><li>Simple Temperature Conversion</li></a>
-						<a target="display" href="./jsp/highestlowestnumber/index.jsp"><li>Highest &amp; Lowest Number</li></a>
-						<a target="display" href="./jsp/temperatureconversion/index.jsp"><li>Temperature Conversion</li></a>
-						<a target="display" href="./jsp/calculator/index.jsp"><li>Calculator</li></a>
-					</div>
-				</div>
+						<!-- CSS -->
+						<li class="subtitle">Cascading Style Sheets<img src="openMenuArrow.png" alt=""></li>
+						<li>
+							<ul class="submenu">
+								<li><a target="display" href="./css/helloworld/index.html">Hello World</a></li>
+								<li><a target="display" href="./css/simplewebsite/index.html">Simple Website</a></li>
+								<li><a target="display" href="./css/table/index.html">Table</a></li>
+								<li><a target="display" href="./css/css1-4/index.html">CSS 1-4</a></li>
+								<li><a target="display" href="./css/float/index.html">Float</a></li>
+								<li><a target="display" href="./css/loginform/index.html">Login Form</a></li>
+								<li><a target="display" href="./css/exampleform/index.html">Example Form</a></li>
+								<li><a target="display" href="./css/fonts/index.html">Fonts</a></li>
+								<li><a target="display" href="./css/fullfeaturedwebsite/index.html">Full Featured Website</a></li>
+								<li><a target="display" href="http://projectbierhier.appspot.com">Project Bierhier</a></li>
+							</ul>	
+						</li>
+						
+						<!-- JS -->
+						<li class="subtitle">Javascript<img src="openMenuArrow.png" alt=""></li>
+						<li>
+							<ul class="submenu">
+								<li><a target="display" href="./js/test/index.html">jQuery Test</a></li>
+								<li><a target="display" href="./js/menu/index.html">jQuery Menu</a></li>
+								<li><a target="display" href="./js/testevent/index.html">Test Event</a></li>
+								<li><a target="display" href="./js/buttonevent/index.html">Button Event</a></li>
+								<li><a target="display" href="./js/colorlists/index.html">Color Lists</a></li>
+								<li><a target="display" href="./js/clickblock/index.html">Click Block</a></li>
+								<li><a target="display" href="./js/animation/index.html">Animation</a></li>
+								<li><a target="display" href="./js/variables/index.html">Javascript Variables</a></li>
+								<li><a target="display" href="./js/typeof/index.html">typeof</a></li>
+								<li><a target="display" href="./js/functions/index.html">Javascript functions</a></li>
+								<li><a target="display" href="./js/functionsjquery/index.html">Javascript functions (jQuery)</a></li>
+								<li><a target="display" href="./js/imageslider/index.html">Image Slider</a></li>
+								<li><a target="display" href="./js/policeapp/index.html">Police App</a></li>
+								<li><a target="display" href="./js/copyobject/index.html">Copy Object</a></li>
+								<li><a target="display" href="./js/cargarage/index.html">Car Garage</a></li>
+								<li><a target="display" href="./js/mobilehelloworld/index.html">Mobile Hello World</a></li>
+							</ul>
+						</li>
+						
+						<!-- JSP -->
+						<li class="subtitle">Java Server Pages<img src="openMenuArrow.png" alt=""></li>
+						<li>
+							<ul class="submenu">
+								<li><a target="display" href="./jsp/moneydivision/index.jsp">Money Division</a></li>
+								<li><a target="display" href="./jsp/seconds/index.jsp">Seconds</a></li>
+								<li><a target="display" href="./jsp/greeting/index.jsp">Greeting</a></li>
+								<li><a target="display" href="./jsp/fibonacci/index.jsp">Fibonacci</a></li>
+								<li><a target="display" href="./jsp/chessboard/index.jsp">Chessboard</a></li>
+								<li><a target="display" href="./jsp/fivetimestable/index.jsp">Five Times Table</a></li>
+								<li><a target="display" href="./jsp/timestablesgrid/index.jsp">Times Tables Grid</a></li>
+								<li><a target="display" href="./jsp/timestableselect/index.jsp">Times Table Select</a></li>
+								<li><a target="display" href="./jsp/timestablenext/index.jsp">Times Table Next</a></li>
+								<li><a target="display" href="./jsp/simpletemperatureconversion/index.jsp">Simple Temperature Conversion</a></li>
+								<li><a target="display" href="./jsp/highestlowestnumber/index.jsp">Highest &amp; Lowest Number</a></li>
+								<li><a target="display" href="./jsp/temperatureconversion/index.jsp">Temperature Conversion</a></li>
+								<li><a target="display" href="./jsp/calculator/index.jsp">Calculator</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 			</ul>
 			<div id="dockButton"></div>
 		</div>

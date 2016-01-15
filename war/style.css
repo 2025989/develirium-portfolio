@@ -3,6 +3,7 @@
 * {margin: 0px; padding: 0px;}
 
 body {
+	height: 100%;
 	background: no-repeat fixed bottom;
 	background-color: #EDFFEE;
 	background-image: url('GrassHD.png');
@@ -30,12 +31,13 @@ nav li {
 	color: #FFFFFF;
 	font: 1.75vw Arial, Helvetica, sans-serif;
 }
-span {
+#content {
+	display: initial !important;
 	position: relative;
 	top: 12vh;
 	text-align: center;
 }
-h4 {font: 2vw Arial, Helvetica, sans-serif;}
+h2 {font: 2vw Arial, Helvetica, sans-serif;}
 p {font: 1.25vw Arial, Helvetica, sans-serif;}
 
 #dropdown {
@@ -69,23 +71,29 @@ img#githubLogo {
 	position: relative;
 	top: 0.15em;
 }
-div {
+.menu, .submenu {
 	display: none;
 	font-size: 1.5vw;
 }
-ul > li + div { /*menus*/
+.menu {
 	max-height: 45vh;
 	overflow-y: auto;
 }
-ul > li + div > div { /*submenus*/
+.submenu {
 	font-size: 1vw;
 }
 a:not(.contact-link) {
+	width: 100%;
+	display: inline-block;
 	color: #000000;
 	text-decoration: none;
 }
 .contact-link {
-	color: #008000;
+	color: #008000 !important;
+}
+nav li a {
+	color: #FFFFFF !important;
+	text-decoration: none;
 }
 li:hover {
 	background-color: rgba(0, 0, 0, 0.075);
